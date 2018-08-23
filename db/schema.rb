@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_21_204140) do
+ActiveRecord::Schema.define(version: 2018_08_22_235032) do
 
   create_table "diet_foods", force: :cascade do |t|
     t.integer "diet_id"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2018_08_21_204140) do
     t.string "activity_level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "goal"
   end
 
 end

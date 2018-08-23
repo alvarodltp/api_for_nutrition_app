@@ -8,4 +8,13 @@ class UsersController < ApplicationController
     render json: User.find(params[:id])
   end
 
+  def create
+    render json: User.create(user_params)
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:name, :gender, :weight, :height, :age, :activity_level, :goal)
+  end
+
 end
